@@ -1,15 +1,100 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+
+
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+
+.nav-box{
+    background-color: red;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
 }
+
+
+.nav-link{
+
+   
+}
+
+.nav-title{
+    font-size: 25px;
+    font-weight: 700;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   color: aliceblue;
+   font-family: "Kirang Haerang", system-ui;
+}
+.links{
+    margin: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.user-header{
+    display: flex;
+    /* background-color: green; */
+     padding: 5px; 
+    
+     
+}
+
+.user-img{
+
+    width: 50px;
+    object-fit: fit;
+
+    height: 50px;
+    border-radius: 100%;
+}
+
+.user-name1,.user-name2{
+
+    position: relative;
+    top: -10px;
+    font-size: 17px;
+    color: white;
+    font-weight: 700;
+    padding-left: 5px;
+    
+
+}
+
+.user-name2{
+    color:'gray';
+    font-weight: 500;
+
+}
+
+.post-text{
+
+    /* background: green; */
+    width: 80%;
+    position: relative;
+    left: 30px;
+    top: 5px;
+    color: aliceblue;
+
+}
+
+.post-box{
+    margin-bottom: 20px;
+    padding: 10px;
+   border-bottom: 1px solid #ccc;
+   margin-top: 4px;  
+}
+
+
