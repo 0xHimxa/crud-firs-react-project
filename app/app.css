@@ -4,7 +4,7 @@ body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    background: #121212;
 
 
 }
@@ -12,8 +12,10 @@ body{
 
 
 .nav-box{
-    background-color: red;
-    height: 80px;
+    
+    /* background-color: #E74C3c; */
+    background-color: #1E1E1E;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,6 +28,9 @@ body{
 .nav-link{
 
    
+}
+.add-red{
+    color:red
 }
 
 .nav-title{
@@ -44,6 +49,44 @@ body{
     font-weight: 700;
     text-decoration: none;
 }
+
+.current-user{
+    /* background-color: green; */
+    /* align-self: flex-end; */
+    display: flex;
+    width: 70%;
+    justify-content: end;
+    padding-right: 10px;
+    padding: 10px;
+}
+
+.current-user p{
+    /* background-color: blue; */
+    padding: 5px;
+    color: white;
+   
+}
+
+.current-user img{
+    border-radius: 100%;
+    object-fit: fill;
+   
+}
+
+.l-btn{
+    /* background-color: pink; */
+    display: flex;
+    align-items: end;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.l-btn button{
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
 .user-header{
     display: flex;
     /* background-color: green; */
@@ -93,8 +136,289 @@ body{
 .post-box{
     margin-bottom: 20px;
     padding: 10px;
-   border-bottom: 1px solid #ccc;
+   border-bottom: 0.5px solid #ccc;
    margin-top: 4px;  
+   background-color: #1E1E1E;
+    box-shadow: 1px 1px 4px black;
+    width: 90%;
+
+}
+
+.login-form{
+
+     background-color: #1E1E1E;
+
+
+    width: 70%;
+
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 4px black;
+   
+   
+}
+.login-box{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.login-center{
+    /* background-color: brown; */
+    width: 500px;
+    height: 80%;
+    padding: 5px;
+}
+
+.sp-input{
+
+    display: flex;
+    flex-direction: column;
+   padding: 10px;
+   /* background-color: blue; */
+
+
+}
+
+.login-input{
+
+    width: 100%;
+    height: 50px;
+    border: 1px solid  gray;
+    border-radius: 5px;
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.login-input:focus{
+    outline: none;
+    border: 1px 1px 1px red;
+}
+
+.login-label{
+    margin-bottom: 5px;
+    font-weight: 540;
+    font-size: 18px;
+    color: white;
 }
 
 
+.login-btn-box{
+    background-color: #65000B;
+    display: flex;
+    justify-content: center;
+}
+.login-btn{
+    background-color: #8000;
+    
+    font-size: 25px;
+    text-transform: capitalize;
+    height: 40px;
+    border: none;
+   
+    border-radius: 5px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 1px 1px 1px rgba(128, 0, 0, 0.785);
+cursor: pointer;
+}
+
+.g-contiue{
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+.g-inner{
+    /* background-color: pink; */
+    width: 100%;
+}
+ .g-contiue p{
+    font-size: 20px;
+    text-align: center;
+    
+    color: white;
+   position: relative;
+    z-index: 1;
+    padding: 1px 1px;
+ }
+
+ .g-contiue p::before{
+
+    content: '';
+    z-index: -1;
+    position: absolute;
+    right: 0px;
+    left: -1px;
+    top:20px;
+    bottom: 0px;
+    width: 100%;
+    height: 0px;
+    border: 1px solid gray;
+ }
+
+ .login-box button{
+    padding: 20px 35px 20px 35px;
+    border: none;
+    border-radius: 3px;
+   
+
+ }
+ .c-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .c-btn button{
+    font-size: 20px;
+    display: flex;
+    border-radius: 4px;
+
+ }
+ .google-icon{
+    font-size: 20px;
+    position: relative;
+   align-self: center;
+   left: 5px;
+   color: red;
+
+ }
+
+ .like-icon{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+ }
+ .like-action{
+    display: flex;
+    margin-top: 20px;
+
+ }
+
+ .like-action span{
+    font-size: 20px;
+    color: white;
+    padding-left: 5px;
+    align-self: center;
+
+
+ }
+ .like-action button{
+    background: transparent;
+    border: none;
+ }
+
+
+
+
+
+
+
+
+
+.create-box{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+ .post-headers{
+display: flex;
+justify-content: space-between;
+padding-left: 10px;
+padding-right: 10px;
+/* background-color: green; */
+width: 90%;
+ }
+
+ .img-user-name{
+
+display: flex;
+padding: 10px;
+ }
+
+ .img-user-name span{
+    align-self: center;
+    margin-left: 10px;
+    font-size: 25px;
+ }
+
+ .img-user-name img{
+    width: 15%;
+    border-radius: 40px;
+    object-fit: cover;
+ }
+
+ .save-btn{
+
+    /* background-color: blue; */
+    display: flex;
+
+ }
+ .save-btn button{
+
+border: none;
+padding: 10px 40px 10px 40px;
+font-size: 16px;
+font-weight: 560;
+border-radius: 20px;
+align-self: center;
+
+
+ }
+
+ .form-input{
+
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    /* background-color: blue; */
+    width: 80%;
+    padding: 10px;
+ }
+
+ .form-input textarea{
+    width: 100%;
+    background: transparent;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: white ;
+    margin-bottom: 20px;
+    outline: none;
+    /* border: none; */
+    
+
+ }
+ .form-input textarea:focus{
+    outline: none;
+ }
+ .form-input button{
+
+    width: 10%;
+    align-self: flex-end;
+    padding-left: 20px;
+    padding-right: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  font-size: 20px;  
+  border-radius: 13px; 
+  border: none;
+  box-shadow: 1px 1px 1px red;
+  
+ }
