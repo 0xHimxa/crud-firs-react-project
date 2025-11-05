@@ -7,3 +7,4 @@
 /build/
 #credentials and secret
 service-fb.json
+service.json
