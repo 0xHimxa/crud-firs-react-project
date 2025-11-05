@@ -5,4 +5,5 @@
 # React Router
 /.react-router/
 /build/
-/service-fb.json
+#credentials and secret
+service-fb.json
