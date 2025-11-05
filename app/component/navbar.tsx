@@ -1,10 +1,31 @@
-import { NavLink } from "react-router";
+import { Form, NavLink, useFetcher } from "react-router";
 import '../app.css'
 import { useState } from "react";
+import {useAuthState} from 'react-firebase-hooks/auth'
+import { auth } from "~/config/firebase";
+import { signOut } from "firebase/auth";
 
-export default function Navbar(){
+type IsShow = {
+    show:boolean
+}
+export default function Navbar({show}: IsShow){
 
-const [user,setUser] = useState(false)
+console.log(show,'from nav')
+
+const fecter = useFetcher()
+
+
+const logOut= async()=>{
+  try {
+    //  await  signOut(auth)
+console.log('inn')
+return
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+
 
     return(
 <div className="nav-box">
@@ -12,18 +33,20 @@ const [user,setUser] = useState(false)
     <div className="nav-link">
         <NavLink to='/' className={({isActive})=> isActive? 'links login add-red': 'links login'}>Home</NavLink>
        
-{user?        <NavLink to='/createpost' className={({isActive})=> isActive? 'links login add-red': 'links login'}>shit post</NavLink>
+{show?        <NavLink to='/createpost' className={({isActive})=> isActive? 'links login add-red': 'links login'}>shit post</NavLink>
 :         <NavLink to='/login' className={({isActive})=> isActive? 'links login add-red': 'links login'}>Login</NavLink>
  }
 </div>
 
 
-{/* <div className="current-user">
+ <div className="current-user">
 
     <img src="../../../public/t.jpg" alt=""  style={{width: '10%'}}/>
 <p>Himxa</p>
-<div className="l-btn"><button>LogOut</button></div>
-</div> */}
+<div className="l-btn"><fecter.Form  method="post" onSubmit={logOut} action="/logout">
+    <button type="submit">LogOut</button>
+    </fecter.Form></div>
+</div> 
 
 
 

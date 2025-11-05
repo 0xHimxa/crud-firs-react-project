@@ -3,6 +3,14 @@ import { useState } from "react";
 // import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
 import { PiBoxingGloveBold } from 'react-icons/pi';
 import { PiBoxingGloveFill } from 'react-icons/pi';
+import type { Route } from "./+types/home";
+import { getSession } from "~/config/session";
+
+
+
+
+
+
 export default function Home (){
 
     const [like,setLiked] = useState(false)
@@ -14,7 +22,7 @@ export default function Home (){
 
 <div className="post-box">
     <div className="user-header">
-        <img src='../../public/t.jpg' className="user-img"/>
+        <img src='/t.jpg' className="user-img"/>
 
          <p className="user-name1">Himxa</p>
    <p className="user-name2">@0xhim_</p>
