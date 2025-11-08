@@ -7,6 +7,7 @@ import { auth, provider } from "~/config/firebase";
 import type React from "react";
 import { adminAuth } from "~/config/admin-config";
 import { commitSession, getSession } from "~/config/session";
+import InitialNav from "~/component/login-Nav";
 
 
 export async function action({request}:Route.ActionArgs) {
@@ -77,9 +78,16 @@ console.log((e as Error).message, 'failed to login with google')
     
 
     return(
+<>
+            <InitialNav/>
+
+<div className="l-big">
+<h1 className="login-intro">
+   Finally, a place for your worst thoughts. Login to start.
+</h1>
         <div className="login-box">
       
-      <Form className="login-form">
+      {/* <Form className="login-form">
         <div className="login-center">
 <div className="sp-input">
     <label htmlFor="email" className="login-label">Email</label>
@@ -99,18 +107,20 @@ console.log((e as Error).message, 'failed to login with google')
 
 
 </div>
-      </Form>
+      </Form> */}
 
 
       <div className="g-contiue">
 <featcher.Form onSubmit={contiueWithGoogle}>
     <div className="g-inner">
-   <p > OR</p>
+ 
    <div className="c-btn"><button type="submit" >contiue with <FaGoogle className="google-icon"/></button></div>
 </div>
 </featcher.Form>
 </div>
         
         </div>
+        </div>
+        </>
     )
 }

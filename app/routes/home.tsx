@@ -6,6 +6,7 @@ import type { Route } from "./+types/home";
 import {
   addDoc,
   collection,
+  deleteDoc,
   doc,
   getDocs,
   query,
@@ -89,6 +90,23 @@ export async function action({ request }: Route.ActionArgs) {
 
 
 
+if(removeLike !== '' ){
+ 
+  if(removeLike !== null){
+
+    const specifc = doc(db,'likes', removeLike.toString())
+
+    await deleteDoc(specifc)
+    return null
+  }
+
+
+}
+
+
+
+
+
 
 console.log(postId,'post',userId,'user','action')
   try {
@@ -134,7 +152,7 @@ const form = new FormData(event.target as HTMLFormElement)
                 <img src={doc.poster_img} className="user-img" width={50} />
 
                 <p className="user-name1">{doc.posterName}</p>
-                <p className="user-name2">@{doc.posterName}</p>
+                
               </div>
 
               <div className="post-text">{doc.post}</div>
@@ -149,7 +167,8 @@ const form = new FormData(event.target as HTMLFormElement)
                
                   <button
                    type="submit"
-                  >
+                 disabled={fetcher.state != 'idle'? true : false}
+                 >
                     {hasUserLiked ? (
                       <PiBoxingGloveFill className="like-icon" />
                     ) : (

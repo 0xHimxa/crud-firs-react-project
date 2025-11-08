@@ -49,8 +49,7 @@ export default function LayoutAuthCheck(){
 
         <>
         <Navbar show={loaderData.nav}/>
-        <p style={{backgroundColor:'red'}}>hhh
-        ggrrrrrgg</p>
+      
         <Outlet/>
         </>
     )

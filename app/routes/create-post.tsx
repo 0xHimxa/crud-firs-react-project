@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useFetcher } from "react-router";
+import { redirect, useFetcher } from "react-router";
 import { auth, db } from "~/config/firebase";
 import type { Route } from "./+types/create-post";
 import { collection, addDoc } from "firebase/firestore";
@@ -22,6 +22,9 @@ export async function action({ request }: Route.ActionArgs) {
       poster_userId: userId,
       poster_img: userImg,
     });
+
+
+    return redirect('/')
   } catch (e) {
     console.log((e as Error).message, "failde to send post to Db");
   }
@@ -56,14 +59,15 @@ function CreatPost() {
       }
     }
   };
+  console.log(user?.photoURL)
 
   return (
     <div className="create-box">
       <div>
         <div className="post-headers">
           <div className="img-user-name">
-            <img src="../../public/t.jpg" alt="" />
-            <span>himxa</span>
+            <img src={user?.photoURL || ''} alt=""  className="c-img"/>
+          
           </div>
 
           <div className="save-btn">
@@ -74,7 +78,7 @@ function CreatPost() {
         <fecter.Form className="form-input" onSubmit={sendPost}>
           <textarea name="posts" id="" rows={10} cols={60}></textarea>
 
-          <button type="submit"> Post</button>
+          <button type="submit" disabled={fecter.state !== 'idle' ? true: false}>{fecter.state !== 'idle'?'....' :'Post'} </button>
         </fecter.Form>
       </div>
     </div>

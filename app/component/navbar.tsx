@@ -33,15 +33,14 @@ return
     <div className="nav-link">
         <NavLink to='/' className={({isActive})=> isActive? 'links login add-red': 'links login'}>Home</NavLink>
        
-{show?        <NavLink to='/createpost' className={({isActive})=> isActive? 'links login add-red': 'links login'}>shit post</NavLink>
-:         <NavLink to='/login' className={({isActive})=> isActive? 'links login add-red': 'links login'}>Login</NavLink>
- }
+        <NavLink to='/createpost' className={({isActive})=> isActive? 'links login add-red': 'links login'}>shit post</NavLink>
+ 
 </div>
 
 
  <div className="current-user">
 
-    <img src="../../../public/t.jpg" alt=""  style={{width: '10%'}}/>
+    
 <p>Himxa</p>
 <div className="l-btn"><fecter.Form  method="post" onSubmit={logOut} action="/logout">
     <button type="submit">LogOut</button>
