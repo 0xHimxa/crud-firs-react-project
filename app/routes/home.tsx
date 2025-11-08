@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { useState } from "react";
 import { PiBoxingGloveBold } from "react-icons/pi";
 import { PiBoxingGloveFill } from "react-icons/pi";

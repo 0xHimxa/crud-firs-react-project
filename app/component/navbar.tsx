@@ -1,7 +1,6 @@
-import { Form, NavLink, useFetcher } from "react-router";
+import { NavLink, useFetcher } from "react-router";
 import '../app.css'
-import { useState } from "react";
-import {useAuthState} from 'react-firebase-hooks/auth'
+
 import { auth } from "~/config/firebase";
 import { signOut } from "firebase/auth";
 
@@ -17,7 +16,7 @@ const fecter = useFetcher()
 
 const logOut= async()=>{
   try {
-    //  await  signOut(auth)
+     await  signOut(auth)
 console.log('inn')
 return
   } catch (error) {
