@@ -8,8 +8,6 @@ import { type ServiceAccount } from 'firebase-admin';
 // 🔥 SECURE FIX: Read Service Account from Vercel Environment Secret 🔥
 // --------------------------------------------------------------------------
 
-// 1. Remove the failing file import:
-// import * as serviceAccount from "../../service.json"; // <-- DELETE THIS LINE
 
 // 2. Access the secure secret you set on Vercel
 const serviceAccountJsonString = process.env.FIREBASE_SERVICE_ACCOUNT_JSON;

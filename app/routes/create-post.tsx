@@ -4,7 +4,7 @@ import { redirect, useFetcher } from "react-router";
 import { auth, db } from "~/config/firebase";
 import type { Route } from "./+types/create-post";
 import { collection, addDoc } from "firebase/firestore";
-import { v4 as uuidv4, v4 } from "uuid";
+import { v4 } from "uuid";
 
 export async function action({ request }: Route.ActionArgs) {
   const form = await request.formData();
