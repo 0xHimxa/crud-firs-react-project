@@ -12,13 +12,24 @@ export async function loader({request}:Route.LoaderArgs) {
     
 
 
-    if(userToken){
-        redirect('/')
-        return { nav:true}
+if(!userToken) return redirect('/login')
+
+
+    
+      return{nav: true,userToken}
         
-    }
+ 
    
-    return redirect('/login')
+   
+
+
+}
+
+
+
+
+export async function action(){
+console.log('in here')
 
 
 }

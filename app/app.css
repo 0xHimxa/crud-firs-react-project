@@ -101,6 +101,7 @@ body{
     object-fit: fit;
 
     height: 50px;
+    display: block;
     border-radius: 100%;
 }
 

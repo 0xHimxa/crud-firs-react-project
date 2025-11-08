@@ -13,7 +13,7 @@ import { getFirestore } from 'firebase-admin/firestore';
 // NOTE: This file MUST be secured and not accessible from the client.
 // --------------------------------------------------------------------------
 import { type ServiceAccount } from 'firebase-admin';
-import * as serviceAccount from "../../service-fb.json";
+import * as serviceAccount from "../../service.json";
 
 // Initialize the Admin SDK. 
 // We use a different name ("server") to avoid conflicts with the client app.

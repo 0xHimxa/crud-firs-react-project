@@ -1,0 +1,7 @@
+
+
+only import session stuffs to where you will use 
+them else your app will cresh
+
+
+same with adminauth

@@ -2,7 +2,7 @@ import { Form, redirect, useFetcher, } from "react-router";
 import { FaGoogle } from 'react-icons/fa';
 import type { Route } from "./+types/create-post";
 
-import {signInWithPopup} from 'firebase/auth'
+import {signInWithPopup, } from 'firebase/auth'
 import { auth, provider } from "~/config/firebase";
 import type React from "react";
 import { adminAuth } from "~/config/admin-config";
@@ -29,13 +29,16 @@ export async function action({request}:Route.ActionArgs) {
             }
         })
      }else{
-        redirect('/login')
+       return  redirect('/login')
      }
+
+
+
    
 
 }
     
-
+return  redirect('/login')
 }
 
 
