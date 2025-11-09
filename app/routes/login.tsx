@@ -11,6 +11,34 @@ import InitialNav from "~/component/login-Nav";
 
 
 export async function action({request}:Route.ActionArgs) {
+
+
+
+
+
+
+
+  const cookie = request.headers.get('Cookie')
+    const sessions = await getSession(cookie)
+    const userTokens = sessions.get('userToken')
+    
+
+
+
+if(userTokens){
+
+    return redirect('/')
+}
+
+
+
+
+
+
+
+
+
+
     const formData = await request.formData()
     const userToken = formData.get('token')
     const session = await getSession()
